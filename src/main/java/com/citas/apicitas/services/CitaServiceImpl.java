@@ -48,13 +48,6 @@ public class CitaServiceImpl implements CitaService{
     } else {
       return citaRepository.save(cita);
     }
-
-    //Segunda manera de hacer la validación
-    // if(citaRepository.existsById(id)){
-    //   throw new DataIntegrityViolationException("Primary key already exists");
-    // }
-
-    // return citaRepository.save(cita);
   }
 
   @Override

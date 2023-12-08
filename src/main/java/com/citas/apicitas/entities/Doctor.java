@@ -16,6 +16,7 @@ public class Doctor {
 
   @Id
   @Column(name = "id_profesional")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long idProfesional;
 
   @Column
@@ -35,6 +36,8 @@ public class Doctor {
   @OneToMany(mappedBy = "doctor")
   private Set<Cita> citas = new HashSet<>();
 
-  public enum Especialidad{medicina_interna, medicina_general};
+  public enum Especialidad {
+    medicina_interna, medicina_general
+  };
 
 }
