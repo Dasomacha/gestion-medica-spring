@@ -1,6 +1,5 @@
 package com.citas.apicitas.services;
 
-import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,13 +40,10 @@ public class CitaServiceImpl implements CitaService{
 
   @Override
   public Cita addCita(CitaId id, Cita cita) {
-    Optional <Cita> citaExist = citaRepository.findById(id);
-
-    if(citaExist.isPresent()){
-      throw new DataIntegrityViolationException("Primary key already exists");
-    } else {
-      return citaRepository.save(cita);
+    if(citaRepository.existsById(id)){
+        throw new DataIntegrityViolationException("Primary key already exists");
     }
+        return citaRepository.save(cita);
   }
 
   @Override
@@ -63,7 +59,6 @@ public class CitaServiceImpl implements CitaService{
 
     nuevaCita.setDoctor(doctor);
     nuevaCita.setPaciente(paciente);
-    // cita.setId(newCita);
 
     citaRepository.delete(cita);
 
