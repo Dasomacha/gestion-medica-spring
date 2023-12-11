@@ -1,4 +1,4 @@
-# Gestion de Citas - Aplicación Spring Boot
+# Gestion de Citas - Aplicación Spring Boot 🚀
 
 La aplicación de Gestión de Citas es una aplicación desarrollada con Spring Boot para la gestión de citas médicas entre doctores y pacientes.
 
@@ -6,13 +6,13 @@ La aplicación de Gestión de Citas es una aplicación desarrollada con Spring B
 
 Sigue estos pasos para instalar y ejecutar la aplicación localmente:
 
-### Requisitos Previos
+### Requisitos Previos 📌
 
 - Java JDK 21
 - Maven
 - MySQL Database
 
-### Pasos de Instalación
+### Pasos de Instalación ⚙️
 
 1. Clona el repositorio:
 
@@ -31,9 +31,24 @@ Sigue estos pasos para instalar y ejecutar la aplicación localmente:
 
 **La aplicación estará disponible en http://localhost:8081**
 
-### Tecnologías Empleadas
+### Tecnologías Empleadas 💻
 - Spring Boot
 - Spring Data JPA
 - MySQL Database
 - Maven
 - Lombok
+
+## Modelo relacional
+
+![model_spring](https://github.com/Dasomacha/imagenes/blob/main/modelo.png?raw=true)   
+
+## Colección de Postman 🎯
+
+Para facilitar la interacción con la API, se ha creado una colección de Postman que contiene ejemplos de solicitudes y ejemplos de respuesta. Sigue los pasos a continuación para importar la colección:
+
+1. Copia el contenido de la colección de Postman API Citas Spring (archivo JSON).
+2. Abre Postman.
+3. En la interfaz de Postman, haz clic en el botón "Import" en la esquina superior izquierda.
+4. Pega el contenido copiado y haz clic en "Import". 
+
+Una vez importada, podrás ver y ejecutar las solicitudes directamente desde Postman para probar la API.
