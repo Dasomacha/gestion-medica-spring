@@ -52,3 +52,23 @@ Para facilitar la interacción con la API, se ha creado una colección de Postma
 4. Pega el contenido copiado y haz clic en "Import". 
 
 Una vez importada, podrás ver y ejecutar las solicitudes directamente desde Postman para probar la API.
+
+### Principales solicitudes
+
+- Agregar paciente
+![paciente](https://github.com/Dasomacha/imagenes/blob/main/spring_crearpacientes.png?raw=true)
+
+- Agregar doctor
+![doctor](https://github.com/Dasomacha/imagenes/blob/main/spring_creardoctores.png?raw=true)   
+
+- Agregar cita
+![cita](https://github.com/Dasomacha/imagenes/blob/main/spring_crearcitas.png?raw=true)
+
+- Listar pacientes
+![listapaciente](https://github.com/Dasomacha/imagenes/blob/main/spring_listarpacientes.png?raw=true)
+
+- Listar doctores
+![listadoctores](https://github.com/Dasomacha/imagenes/blob/main/spring_listardoctores.png?raw=true)
+
+- Listar citas
+![listacitas](https://github.com/Dasomacha/imagenes/blob/main/spring_listarcitas.png?raw=true)
