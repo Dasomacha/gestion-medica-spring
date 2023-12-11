@@ -1,7 +1,6 @@
 package com.citas.apicitas.controllers;
 
-import org.springframework.web.bind.annotation.RestController;
-
+import com.citas.apicitas.entities.Cita;
 import com.citas.apicitas.entities.Doctor;
 import com.citas.apicitas.services.DoctorService;
 
@@ -59,5 +58,11 @@ public class DoctorController {
 
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
+
+  @GetMapping("/{id}/citas")
+    public ResponseEntity<Set<Cita>> getCitasByDoctorId(@PathVariable long id) {
+        Set<Cita> citas = doctorService.findCitasByDoctorId(id);
+        return new ResponseEntity<>(citas, HttpStatus.OK);
+    }
 }
 

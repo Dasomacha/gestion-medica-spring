@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -34,10 +35,11 @@ public class Doctor {
 
   @JsonIgnore
   @OneToMany(mappedBy = "doctor")
+  @JsonManagedReference
   private Set<Cita> citas = new HashSet<>();
 
   public enum Especialidad {
-    medicina_interna, medicina_general
+    medicina_interna, medicina_general, cardiologia, dermatologia, rehabilitacion_fisica, psicologia, odontologia, radiologia
   };
 
 }

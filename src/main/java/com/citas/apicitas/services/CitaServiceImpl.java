@@ -3,13 +3,13 @@ package com.citas.apicitas.services;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import com.citas.apicitas.entities.Cita;
 import com.citas.apicitas.entities.CitaId;
 import com.citas.apicitas.entities.Doctor;
 import com.citas.apicitas.entities.Paciente;
+import com.citas.apicitas.exception.ResourceAlreadyExistsException;
 import com.citas.apicitas.exception.ResourceNotFoundException;
 import com.citas.apicitas.repositories.CitaRepository;
 
@@ -41,7 +41,7 @@ public class CitaServiceImpl implements CitaService{
   @Override
   public Cita addCita(CitaId id, Cita cita) {
     if(citaRepository.existsById(id)){
-        throw new DataIntegrityViolationException("Primary key already exists");
+        throw new ResourceAlreadyExistsException("Cita already exists with id: " + id);
     }
         return citaRepository.save(cita);
   }

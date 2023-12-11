@@ -7,15 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import com.citas.apicitas.entities.Cita;
 import com.citas.apicitas.entities.Doctor;
 import com.citas.apicitas.exception.ResourceNotFoundException;
 import com.citas.apicitas.repositories.DoctorRepository;
+import com.citas.apicitas.repositories.CitaRepository;
 
 @Service
-public class DoctorServiceImpl implements DoctorService{
+public class DoctorServiceImpl implements DoctorService {
 
   @Autowired
   private DoctorRepository doctorRepository;
+
+  @Autowired
+  private CitaRepository citaRepository;
 
   @Override
   public Set<Doctor> findAll() {
@@ -25,16 +30,16 @@ public class DoctorServiceImpl implements DoctorService{
   @Override
   public Doctor findById(Long id) {
     Doctor doctor = doctorRepository.findById(id)
-    .orElseThrow(( ) -> new ResourceNotFoundException("Doctor not found with id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Doctor not found with id: " + id));
 
     return doctor;
   }
 
   @Override
   public Doctor addDoctor(Doctor doctor) {
-    Optional <Doctor> doctorExist = doctorRepository.findById(doctor.getIdProfesional());
+    Optional<Doctor> doctorExist = doctorRepository.findById(doctor.getIdProfesional());
 
-    if(doctorExist.isPresent()){
+    if (doctorExist.isPresent()) {
       throw new DataIntegrityViolationException("Primary key already exists");
     } else {
       return doctorRepository.save(doctor);
@@ -44,7 +49,7 @@ public class DoctorServiceImpl implements DoctorService{
   @Override
   public Doctor modifyDoctor(Long id, Doctor newDoctor) {
     Doctor doctor = doctorRepository.findById(id)
-    .orElseThrow(( ) -> new ResourceNotFoundException("Doctor not found with id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Doctor not found with id: " + id));
 
     newDoctor.setIdProfesional(doctor.getIdProfesional());
 
@@ -54,13 +59,22 @@ public class DoctorServiceImpl implements DoctorService{
   @Override
   public void deleteDoctor(Long id) {
     doctorRepository.findById(id)
-    .orElseThrow(( ) -> new ResourceNotFoundException("Doctor not found with id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Doctor not found with id: " + id));
 
     doctorRepository.deleteById(id);
   }
 
   @Override
-  public Set<Doctor> findAllByEspecialidad(Doctor.Especialidad especialidad){
+  public Set<Doctor> findAllByEspecialidad(Doctor.Especialidad especialidad) {
     return doctorRepository.findAllByEspecialidad(especialidad);
+  }
+
+  @Override
+  public Set<Cita> findCitasByDoctorId(long id) {
+    Doctor doctor = doctorRepository.findById(id)
+        .orElseThrow(() -> new ResourceNotFoundException("Doctor not found with id: " + id));
+    Set<Cita> citas = citaRepository.findCitasByDoctorId(id);
+    doctor.setCitas(citas);
+    return doctor.getCitas();
   }
 }

@@ -44,7 +44,7 @@ public class CitaController {
   }
 
   //Uso de parametros query en este endpoint
-  @GetMapping("/one-cita")
+  @GetMapping("/one")
   public ResponseEntity <Cita> getCita(@RequestParam Long idPaciente,
   @RequestParam Long idDoctor, @RequestParam LocalDateTime fecha_hora){
 

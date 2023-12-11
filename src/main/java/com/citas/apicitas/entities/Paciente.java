@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.util.HashSet;
 
@@ -18,7 +19,6 @@ public class Paciente {
 
   @Id
   @Column(name = "id_numero_cedula")
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long idNumeroCedula;
 
   @Column
@@ -35,5 +35,6 @@ public class Paciente {
 
   @JsonIgnore
   @OneToMany(mappedBy = "paciente")
+  @JsonManagedReference
   private Set<Cita> citas = new HashSet<>();
 }

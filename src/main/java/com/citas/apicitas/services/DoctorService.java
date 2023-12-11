@@ -2,6 +2,7 @@ package com.citas.apicitas.services;
 
 import java.util.Set;
 
+import com.citas.apicitas.entities.Cita;
 import com.citas.apicitas.entities.Doctor;
 
 public interface DoctorService {
@@ -12,4 +13,5 @@ public interface DoctorService {
   Doctor addDoctor(Doctor doctor);
   Doctor modifyDoctor(Long id, Doctor doctor);
   void deleteDoctor(Long id);
+  Set<Cita> findCitasByDoctorId(long id);
 }
