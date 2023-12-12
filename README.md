@@ -55,20 +55,45 @@ Una vez importada, podrás ver y ejecutar las solicitudes directamente desde Pos
 
 ### Principales solicitudes
 
+#### Pacientes
+
 - Agregar paciente
 ![paciente](https://github.com/Dasomacha/imagenes/blob/main/spring_crearpacientes.png?raw=true)
-
-- Agregar doctor
-![doctor](https://github.com/Dasomacha/imagenes/blob/main/spring_creardoctores.png?raw=true)   
-
-- Agregar cita
-![cita](https://github.com/Dasomacha/imagenes/blob/main/spring_crearcitas.png?raw=true)
 
 - Listar pacientes
 ![listapaciente](https://github.com/Dasomacha/imagenes/blob/main/spring_listarpacientes.png?raw=true)
 
+- Actualizar paciente
+![Actualizapaciente](https://github.com/Dasomacha/imagenes/blob/main/spring_actualizapacientes.png?raw=true)
+
+- Eliminar paciente
+![Eliminapacientes](https://github.com/Dasomacha/imagenes/blob/main/spring_eliminarpaciente.png?raw=true) 
+
+#### Doctores
+
+- Agregar doctor
+![doctor](https://github.com/Dasomacha/imagenes/blob/main/spring_creardoctores.png?raw=true) 
+
 - Listar doctores
 ![listadoctores](https://github.com/Dasomacha/imagenes/blob/main/spring_listardoctores.png?raw=true)
 
+- Actualizar doctor
+![Actualizadoctor](https://github.com/Dasomacha/imagenes/blob/main/spring_actualizadoctor.png?raw=true)
+
+- Eliminar doctor
+![Eliminadoctor](https://github.com/Dasomacha/imagenes/blob/main/spring_eliminardoctor.png?raw=true) 
+
+
+#### Citas
+
+- Agregar cita
+![cita](https://github.com/Dasomacha/imagenes/blob/main/spring_crearcitas.png?raw=true)
+
 - Listar citas
 ![listacitas](https://github.com/Dasomacha/imagenes/blob/main/spring_listarcitas.png?raw=true)
+
+- Actualizar cita
+![Actualizacita](https://github.com/Dasomacha/imagenes/blob/main/spring_actualizacita.png?raw=true)
+
+- Eliminar cita
+![Eliminacita](https://github.com/Dasomacha/imagenes/blob/main/spring_eliminarcita.png?raw=true) 

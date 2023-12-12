@@ -269,6 +269,54 @@
 			]
 		},
 		{
+			"name": "Buscar doctor especialidad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/doctores/especialidad/medicina_interna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"doctores",
+						"especialidad",
+						"medicina_interna"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buscar doctor especialidad",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/doctores/especialidad/medicina_interna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"doctores",
+								"especialidad",
+								"medicina_interna"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
 			"name": "Crear pacientes",
 			"request": {
 				"method": "POST",
@@ -616,6 +664,328 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/citas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"citas"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Listar cita unica",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/citas/one?idPaciente=84591672&idDoctor=1&fecha_hora=2023-12-31T10:30:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"citas",
+						"one"
+					],
+					"query": [
+						{
+							"key": "idPaciente",
+							"value": "84591672"
+						},
+						{
+							"key": "idDoctor",
+							"value": "1"
+						},
+						{
+							"key": "fecha_hora",
+							"value": "2023-12-31T10:30:00"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar cita unica",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/citas/one?idPaciente=84591672&idDoctor=1&fecha_hora=2023-12-31T10:30:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"citas",
+								"one"
+							],
+							"query": [
+								{
+									"key": "idPaciente",
+									"value": "84591672"
+								},
+								{
+									"key": "idDoctor",
+									"value": "1"
+								},
+								{
+									"key": "fecha_hora",
+									"value": "2023-12-31T10:30:00"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Listar cita por paciente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/pacientes/84591672/citas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"pacientes",
+						"84591672",
+						"citas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar cita por paciente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/pacientes/84591672/citas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"pacientes",
+								"84591672",
+								"citas"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Listar cita por doctor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/doctores/1/citas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"doctores",
+						"1",
+						"citas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar cita por doctor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/doctores/1/citas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"doctores",
+								"1",
+								"citas"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Actualizar citas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idProfesional\": 1,\r\n  \"idNumeroCedula\": 84591672,\r\n  \"fechaHora\": \"2023-12-31T15:20:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/citas?idPaciente=84591672&idDoctor=1&fecha_hora=2023-12-31T10:30:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"citas"
+					],
+					"query": [
+						{
+							"key": "idPaciente",
+							"value": "84591672"
+						},
+						{
+							"key": "idDoctor",
+							"value": "1"
+						},
+						{
+							"key": "fecha_hora",
+							"value": "2023-12-31T10:30:00"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar citas",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idProfesional\": 1,\r\n  \"idNumeroCedula\": 84591672,\r\n  \"fechaHora\": \"2023-12-31T15:20:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/citas?idPaciente=84591672&idDoctor=1&fecha_hora=2023-12-31T10:30:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"citas"
+							],
+							"query": [
+								{
+									"key": "idPaciente",
+									"value": "84591672"
+								},
+								{
+									"key": "idDoctor",
+									"value": "1"
+								},
+								{
+									"key": "fecha_hora",
+									"value": "2023-12-31T10:30:00"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Eliminar citas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idProfesional\": 1,\r\n  \"idNumeroCedula\": 84591672,\r\n  \"fechaHora\": \"2023-12-31T15:20:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/citas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"citas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Eliminar citas",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idProfesional\": 1,\r\n  \"idNumeroCedula\": 84591672,\r\n  \"fechaHora\": \"2023-12-31T15:20:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:8081/api/citas",
 							"protocol": "http",
